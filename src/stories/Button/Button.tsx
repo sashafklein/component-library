@@ -1,8 +1,7 @@
 import React, { ReactElement } from "react";
-import { styled, Button as MuiButton } from "@mui/material";
+import { styled, Button as MuiButton, Theme, Palette } from "@mui/material";
 
-import { Palette } from "@shared/types";
-import { isAbsoluteURL } from "@shared/utils";
+import { isAbsoluteURL } from "../../shared/utils";
 
 type ButtonType = "primary" | "secondary" | "tertiary" | "destructive";
 
@@ -10,17 +9,20 @@ export interface ButtonProps {
   children: ReactElement | string;
   type: ButtonType;
   onClick?: () => void;
+
   /**
    * If a `to` is supplied, the button becomes a link.
    * - An `a` tag is used if the path is absolute.
    * - If the path is relative, a Link must also be passed.
    * */
   to?: string;
+
   /** Must be passed if the button contains a relative `to` path. */
   Link?: React.Component;
   startIcon?: ReactElement;
   endIcon?: ReactElement;
   disabled?: boolean;
+
   /** Collapses padding if true. */
   thin?: boolean;
 }
@@ -65,20 +67,20 @@ export const Button = (props: ButtonProps): ReactElement => {
   }
 
   const colors = (palette: Palette) => {
-    const { primary, grey, error, white } = palette;
+    const { primary, grey, error } = palette;
 
     return disabled
       ? { bg: grey.light, text: grey.main, border: "transparent" }
       : {
-          primary: { bg: primary.main, text: white.main, border: primary.main },
+          primary: { bg: primary.main, text: "white", border: primary.main },
           secondary: { bg: primary.light, text: primary.main, border: "transparent" },
-          tertiary: { bg: white.main, text: grey.dark, border: grey.dark },
+          tertiary: { bg: "white", text: grey.dark, border: grey.dark },
           destructive: { bg: error.light, text: error.main, border: "transparent" },
         }[type];
   };
 
-  const styles = (palette: Palette) => {
-    const c = colors(palette);
+  const styles = (theme: Theme) => {
+    const c = colors(theme.palette);
     return `
       padding: ${thin ? "2px 12px" : "8px 16px"};
       background-color: ${c.bg};
@@ -88,7 +90,7 @@ export const Button = (props: ButtonProps): ReactElement => {
       box-shadow: none;
       cursor: ${disabled ? "not-allowed" : "pointer"};
 
-      /* Invert colors on hover (keep border the same) */
+      /* Invert colors on hover (keep border the same and ignore for disabled) */
       &:hover {
         background-color: ${disabled ? c.bg : c.text};
         color: ${disabled ? c.text : c.bg};
@@ -100,7 +102,7 @@ export const Button = (props: ButtonProps): ReactElement => {
   };
 
   const StyledButton = styled(MuiButton)`
-    ${({ theme }) => styles(theme.palette)}
+    ${({ theme }) => styles(theme)}
   `;
 
   return <StyledButton {...passedProps}>{children}</StyledButton>;

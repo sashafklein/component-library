@@ -32,5 +32,6 @@ module.exports = {
   globals: {
     module: "readonly",
     process: "readonly",
+    jest: "readonly",
   },
 };
