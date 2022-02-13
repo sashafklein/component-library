@@ -1,0 +1,128 @@
+// Color pallette -- see https://coolors.co/69932b-a69529-0090bf-e18335-e55934
+$coolers-palette-1: #69932b;
+$coolers-palette-2: #a69529;
+$coolers-palette-3: #0090bf;
+$coolers-palette-4: #e18335;
+$coolers-palette-5: #e55934;
+
+// primary
+$primary-700: #1b57b3;
+$primary-500: #1b57b3; // #076AFF;
+$primary-100: #e5f0ff;
+
+// accent
+$accent-500: #f7931a;
+
+// grays
+$gray-600: #47484a;
+$gray-500: #6e7073;
+$gray-400: #909396;
+$gray-300: #c1c5c9;
+$gray-250: #e9ecf0;
+$gray-200: #f2f2f2;
+$gray-100: #f5f5f5;
+$gray-white: #ffffff;
+
+// black
+$black-900: #212c3b;
+$black-600: #434d5e;
+$black-500: #626d80;
+
+// reds
+$red-700: #bf3030;
+$red-500: #ff4040;
+$red-100: #ffe5e5;
+
+// greens
+$green-800: #2a6617;
+$green-700: #3a8f21;
+$green-500: #54ce30;
+$green-100: #ebffe5;
+
+// yellows
+$yellow-500: #f17c15;
+$yellow-100: #fffce5;
+
+// color variables
+$bitcoinOrange: $accent-500;
+$white: $gray-white;
+$black: $black-900; //#000;
+$light: #fbfcfe; /* off-white*/
+$dark: $black-900; //#39404D;         /* blueish-gray */
+$dark-gray: $gray-600; //#494949;         /* gray/black */
+$secondary: #b9d0f9; /* light blue */
+$dark-blue: #051b31;
+$dark-blue-gradient: #093159; /* used in SignedRibbon */
+$primary: $primary-500; //#2657a2;      /* main blue */
+$primary-active: $primary-500; //#076aff;      /* main blue - lighter */
+$primaryHover: rgba($primary, 0.9); // rgba(38,87,162,0.9);         /* main blue - lighter */
+$primaryLightHover: rgba($primary, 0.1); // rgba(38,87,162,0.1);       /* main blue - lighter */
+$primaryDisabled: rgba($primary, 0.53); //rgba(28, 87, 162, 0.53);       /* main blue - disabled */
+$light-gray: $gray-250; // #e2e6ea;        /* light gray */
+$light-gray-bg: $gray-250; // #e5e9ee;        /* alt light gray for bg */
+$gray-inactive: #90a3bc; /* light gray for buttons that are inactive */
+$green: $green-700; // #4B7F52;       /* green */
+$success: $green; /* green */
+$greenHover: rgba($green, 0.85); // rgba(75, 127, 82, 0.85);    /* green - lighter */
+$greenLightHover: rgba($green, 0.1); // rgba(75, 127, 82, 0.1);   /* green - faint */
+$greenDisabled: rgba($green, 0.73); // rgba(65, 127, 82, 0.73);    /* green - disabled */
+$green800Hover: rgba($green-800, 0.85);
+$green800LightHover: rgba($green-800, 0.1);
+$green800Disabled: rgba($green-800, 0.73);
+$accentOrange: $accent-500; // #fd9608;      /* orange - for graph lines, highlighting, etc */
+$partner: #9d6381; /* purple */
+$partnerHover: rgba($partner, 0.9); // rgba(157, 99, 129, 0.9);
+$partnerLightHover: rgba($partner, 0.1);
+$partnerDisabled: rgba($partner, 0.53); // rgba(147, 99, 129, 0.53);
+$info: $black-500; /* purple */
+$warning: $yellow-500; // #FFC857;      /* orange */
+$warning-light: $yellow-100;
+$danger: $red-700; // #9d0038;         /* red */
+$dangerHover: rgba($danger, 0.9); // rgba(157, 0, 56, 0.9);      /* red - lighter */
+$dangerDisabled: rgba($danger, 0.53); //rgba(147, 0, 56, 0.53);     /* red - disabled */
+$navbarBlue: #051b2f;
+
+$theme-colors: (
+  "success": $success,
+  "info": $info,
+  "primary": $primary,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light-gray,
+  "dark": $dark-gray,
+);
+
+:export {
+  primary700: $primary-700;
+  primary500: $primary-500;
+  primary100: $primary-100;
+  accent500: $accent-500;
+  gray600: $gray-600;
+  gray500: $gray-500;
+  gray400: $gray-400;
+  gray300: $gray-300;
+  gray250: $gray-250;
+  gray200: $gray-200;
+  gray100: $gray-100;
+  grayWhite: $gray-white;
+  black900: $black-900;
+  black600: $black-600;
+  black500: $black-500;
+  red700: $red-700;
+  red500: $red-500;
+  red100: $red-100;
+  green700: $green-700;
+  green500: $green-500;
+  green100: $green-100;
+  yellow500: $yellow-500;
+  yellow100: $yellow-100;
+  primary: $primary;
+  success: $success;
+  info: $info;
+  secondary: $secondary;
+  warning: $warning;
+  danger: $danger;
+  light: $light-gray;
+  dark: $dark-gray;
+  darkBlue: $dark-blue;
+}

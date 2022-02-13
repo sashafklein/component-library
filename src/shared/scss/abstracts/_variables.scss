@@ -1,0 +1,24 @@
+@import "../base/overrides";
+@import "./colors";
+
+$breakpoint-xs: 400px;
+$breakpoint-s: 600px;
+$breakpoint-m: 900px;
+$breakpoint-l: 1200px;
+$breakpoint-xl: 1536px;
+
+/** typography **/
+$header-line-height: 149%;
+
+/** borders **/
+$border-radius: 8px;
+$light-border: 1px solid $gray-250;
+
+:export {
+  headerLineHeight: $header-line-height;
+  breakpointXs: $breakpoint-xs;
+  breakpointS: $breakpoint-s;
+  breakpointM: $breakpoint-m;
+  breakpointL: $breakpoint-l;
+  breakpointXl: $breakpoint-xl;
+}

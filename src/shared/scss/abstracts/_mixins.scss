@@ -1,0 +1,136 @@
+/******
+** Fonts
+******/
+
+/** Headers **/
+
+@mixin header-base {
+  line-height: 149%;
+  color: $black-600;
+}
+
+@mixin h100($style: "normal") {
+  @include header-base;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  @if $style == "light" {
+    color: $black-500;
+  }
+}
+
+@mixin h200($style: "normal") {
+  @include h100($style);
+  letter-spacing: 0.1em;
+}
+
+@mixin h300() {
+  @include header-base;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+@mixin h400() {
+  @include h300;
+  font-weight: 700;
+}
+
+@mixin h600() {
+  @include header-base;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+@mixin h700($style: "normal") {
+  @include header-base;
+  font-size: 1.25rem;
+  font-weight: 600;
+  @if $style == "light" {
+    font-weight: 500;
+  }
+}
+
+@mixin h900($style: "normal") {
+  @include header-base;
+  font-size: 1.5rem;
+  font-weight: 600;
+  @if $style == "light" {
+    font-weight: 500;
+  }
+}
+
+@mixin h950() {
+  @include header-base;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/** Text **/
+
+@mixin text-base($style) {
+  line-height: 149%;
+  color: $black-900;
+  letter-spacing: 0;
+  @if $style == "light" {
+    color: $black-500;
+  }
+}
+
+@mixin mono-base() {
+  font-family: "Roboto Mono", monospace;
+  line-height: 125%;
+  color: $black-900;
+}
+
+@mixin mono-300() {
+  @include mono-base;
+  font-size: 0.75rem;
+}
+
+@mixin mono-500() {
+  @include mono-base;
+  font-size: 0.875rem;
+}
+
+@mixin text-300($style: "normal") {
+  @include text-base($style);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+@mixin text-400($style: "normal") {
+  @include text-300($style);
+  font-weight: 500;
+}
+
+@mixin text-500($style: "normal") {
+  @include text-base($style);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+@mixin text-600($style: "normal") {
+  @include text-500($style);
+  font-weight: 600;
+}
+
+@mixin link-text {
+  color: $primary-500;
+}
+
+/******
+** Other
+******/
+
+@mixin scaledItemSizes($height, $width, $padding-top, $padding-bottom, $scaleFactor) {
+  height: calc(#{$height} * #{$scaleFactor});
+  width: calc(#{$width} * #{$scaleFactor});
+  padding-top: calc(#{$padding-top} * #{$scaleFactor});
+  padding-bottom: calc(#{$padding-bottom} * #{$scaleFactor});
+}
+
+@mixin overflow-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

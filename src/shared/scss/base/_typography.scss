@@ -1,0 +1,67 @@
+.h950 {
+  @include h950;
+}
+
+h1,
+.h900 {
+  @include h900;
+}
+
+h2,
+.h700 {
+  @include h700;
+  -webkit-font-smoothing: antialiased;
+}
+
+h3 {
+  @include h600;
+  -webkit-font-smoothing: antialiased;
+}
+
+.h600 {
+  @include h600;
+}
+
+h4,
+.h400 {
+  @include h400;
+}
+
+.h300 {
+  @include h300;
+}
+
+.h200 {
+  @include h200;
+}
+
+h5,
+.h100 {
+  @include h100;
+}
+
+.t600 {
+  @include text-600;
+}
+
+p,
+.t500 {
+  @include text-500;
+}
+
+.t400 {
+  @include text-400;
+}
+
+.t300 {
+  @include text-300;
+}
+
+code,
+.m300 {
+  @include mono-300;
+}
+
+.m500 {
+  @include mono-500;
+}
