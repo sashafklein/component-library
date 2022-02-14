@@ -4,8 +4,8 @@ export const theme = (variables: any) =>
   createTheme({
     palette: {
       primary: {
-        main: variables.primary500,
-        light: "#E5F0FF",
+        main: variables.green700,
+        light: variables.green100,
       },
       error: {
         light: "#FFECEF",
