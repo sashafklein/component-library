@@ -40,3 +40,5 @@ jest.mock("../shared/scss/theme.module.scss", () => ({
   breakpointL: "1200px",
   breakpointXl: "1536px",
 }));
+
+export default {};

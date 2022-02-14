@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { Meta, Story } from "@storybook/react";
 import { styled } from "@mui/material";
 import { Button, ButtonProps } from "./Button";

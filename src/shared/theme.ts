@@ -11,11 +11,6 @@ export const theme = (variables: any) =>
         light: "#FFECEF",
         main: "#C73230",
       },
-      grey: {
-        dark: "#626D80",
-        main: "#C1C5C9",
-        light: "#F5F5F5",
-      },
     },
     typography: {
       fontFamily: variables.fontFamilySansSerif,

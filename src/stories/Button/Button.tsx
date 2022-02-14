@@ -5,6 +5,12 @@ import { isAbsoluteURL } from "../../shared/utils";
 
 type ButtonType = "primary" | "secondary" | "tertiary" | "destructive";
 
+const grey = {
+  dark: "#525a68",
+  main: "#C1C5C9",
+  light: "#F5F5F5",
+};
+
 export interface ButtonProps {
   children: ReactElement | string;
   type: ButtonType;
@@ -67,7 +73,7 @@ export const Button = (props: ButtonProps): ReactElement => {
   }
 
   const colors = (palette: Palette) => {
-    const { primary, grey, error } = palette;
+    const { primary, error } = palette;
 
     return disabled
       ? { bg: grey.light, text: grey.main, border: "transparent" }
