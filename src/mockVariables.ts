@@ -1,4 +1,4 @@
-jest.mock("../shared/scss/theme.module.scss", () => ({
+export const mockVariables = {
   primary700: "#1b57b3",
   primary500: "#1b57b3",
   primary100: "#e5f0ff",
@@ -39,6 +39,6 @@ jest.mock("../shared/scss/theme.module.scss", () => ({
   breakpointM: "900px",
   breakpointL: "1200px",
   breakpointXl: "1536px",
-}));
+};
 
-export default {};
+jest.mock("../shared/scss/theme.module.scss", () => mockVariables);

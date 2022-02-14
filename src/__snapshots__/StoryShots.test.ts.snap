@@ -2,7 +2,7 @@
 
 exports[`Storyshots Atoms/Button Destructive 1`] = `
 <button
-  className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-1an04x2-MuiButtonBase-root-MuiButton-root"
+  className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-1cbot4z-MuiButtonBase-root-MuiButton-root"
   disabled={false}
   href=""
   onBlur={[Function]}
@@ -26,7 +26,7 @@ exports[`Storyshots Atoms/Button Destructive 1`] = `
 
 exports[`Storyshots Atoms/Button Disabled 1`] = `
 <button
-  className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-4r5sf-MuiButtonBase-root-MuiButton-root"
+  className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-umi9zu-MuiButtonBase-root-MuiButton-root"
   disabled={false}
   href=""
   onBlur={[Function]}
@@ -54,7 +54,7 @@ Array [
     className="css-1ef4cec"
   >
     <button
-      className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-18hg4z3-MuiButtonBase-root-MuiButton-root"
+      className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-1omxw3o-MuiButtonBase-root-MuiButton-root"
       disabled={false}
       href=""
       onBlur={[Function]}
@@ -75,7 +75,7 @@ Array [
       Primary
     </button>
     <button
-      className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-sf8mq-MuiButtonBase-root-MuiButton-root"
+      className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-gcsy8-MuiButtonBase-root-MuiButton-root"
       disabled={false}
       href=""
       onBlur={[Function]}
@@ -96,7 +96,7 @@ Array [
       Secondary
     </button>
     <button
-      className="MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButtonBase-root css-1ti20ik-MuiButtonBase-root-MuiButton-root"
+      className="MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButtonBase-root css-1ek8s8y-MuiButtonBase-root-MuiButton-root"
       disabled={false}
       href=""
       onBlur={[Function]}
@@ -117,7 +117,7 @@ Array [
       Tertiary
     </button>
     <button
-      className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-1an04x2-MuiButtonBase-root-MuiButton-root"
+      className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-1cbot4z-MuiButtonBase-root-MuiButton-root"
       disabled={false}
       href=""
       onBlur={[Function]}
@@ -138,7 +138,7 @@ Array [
       Destructive
     </button>
     <button
-      className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-18hg4z3-MuiButtonBase-root-MuiButton-root"
+      className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-1omxw3o-MuiButtonBase-root-MuiButton-root"
       disabled={false}
       href=""
       onBlur={[Function]}
@@ -174,7 +174,7 @@ Array [
       With Start Icon
     </button>
     <button
-      className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-sf8mq-MuiButtonBase-root-MuiButton-root"
+      className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-gcsy8-MuiButtonBase-root-MuiButton-root"
       disabled={false}
       href=""
       onBlur={[Function]}
@@ -214,7 +214,7 @@ Array [
     className="css-1ef4cec"
   >
     <button
-      className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-1vnmaea-MuiButtonBase-root-MuiButton-root"
+      className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-6zvo8n-MuiButtonBase-root-MuiButton-root"
       disabled={false}
       href=""
       onBlur={[Function]}
@@ -235,7 +235,7 @@ Array [
       Thin
     </button>
     <button
-      className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-qb8i9v-MuiButtonBase-root-MuiButton-root"
+      className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-1f86kda-MuiButtonBase-root-MuiButton-root"
       disabled={false}
       href=""
       onBlur={[Function]}
@@ -271,7 +271,7 @@ Array [
       </span>
     </button>
     <button
-      className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-4r5sf-MuiButtonBase-root-MuiButton-root"
+      className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-umi9zu-MuiButtonBase-root-MuiButton-root"
       disabled={false}
       href=""
       onBlur={[Function]}
@@ -297,7 +297,7 @@ Array [
 
 exports[`Storyshots Atoms/Button Primary 1`] = `
 <button
-  className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-18hg4z3-MuiButtonBase-root-MuiButton-root"
+  className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-1omxw3o-MuiButtonBase-root-MuiButton-root"
   disabled={false}
   href=""
   onBlur={[Function]}
@@ -321,7 +321,7 @@ exports[`Storyshots Atoms/Button Primary 1`] = `
 
 exports[`Storyshots Atoms/Button Secondary 1`] = `
 <button
-  className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-sf8mq-MuiButtonBase-root-MuiButton-root"
+  className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-gcsy8-MuiButtonBase-root-MuiButton-root"
   disabled={false}
   href=""
   onBlur={[Function]}
@@ -345,7 +345,7 @@ exports[`Storyshots Atoms/Button Secondary 1`] = `
 
 exports[`Storyshots Atoms/Button Tertiary 1`] = `
 <button
-  className="MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButtonBase-root css-1ti20ik-MuiButtonBase-root-MuiButton-root"
+  className="MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButtonBase-root css-1ek8s8y-MuiButtonBase-root-MuiButton-root"
   disabled={false}
   href=""
   onBlur={[Function]}
@@ -369,7 +369,7 @@ exports[`Storyshots Atoms/Button Tertiary 1`] = `
 
 exports[`Storyshots Atoms/Button Thin 1`] = `
 <button
-  className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-1vnmaea-MuiButtonBase-root-MuiButton-root"
+  className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-6zvo8n-MuiButtonBase-root-MuiButton-root"
   disabled={false}
   href=""
   onBlur={[Function]}
@@ -393,7 +393,7 @@ exports[`Storyshots Atoms/Button Thin 1`] = `
 
 exports[`Storyshots Atoms/Button With End Icon And On Click 1`] = `
 <button
-  className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-1an04x2-MuiButtonBase-root-MuiButton-root"
+  className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-1cbot4z-MuiButtonBase-root-MuiButton-root"
   disabled={false}
   href=""
   onBlur={[Function]}
@@ -433,7 +433,7 @@ exports[`Storyshots Atoms/Button With End Icon And On Click 1`] = `
 
 exports[`Storyshots Atoms/Button With Start Icon 1`] = `
 <button
-  className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-sf8mq-MuiButtonBase-root-MuiButton-root"
+  className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-gcsy8-MuiButtonBase-root-MuiButton-root"
   disabled={false}
   href=""
   onBlur={[Function]}
