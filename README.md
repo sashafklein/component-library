@@ -1,83 +1,122 @@
+# Component Library
 
-<p align="center">
-  <a href="https://www.chromatic.com/">
-    <img alt="Chromatic" src="https://avatars2.githubusercontent.com/u/24584319?s=200&v=4" width="60" />
-  </a>
-</p>
+## Getting Started
 
-<h1 align="center">
-  Chromatic's Design Systems for Developers tutorial template
-</h1>
+```bash
+npm install
+npm run storybook
+```
 
-This template ships with the main React configuration files you'll need to get up and running fast.
+Check out a new branch for any changes, push that branch to the main repo, and PR. Unlike `trefoil-web`, the component library does *not* follow a fork-based PR process, and you can/should open your branch/PR within the repo.
 
-## 🚅  Quick start
+## Deploy and Review
 
-1.  **Create the application.**
+### Deploying
 
-    Use [degit](https://github.com/Rich-Harris/degit) to get this template.
+To deploy:
 
-    ```shell
-    # Clone the template
-    npx degit chromaui/learnstorybook-design-system-template learnstorybook-design-system
-    ```
+- Make your change (including any relevant tests) in your branch.
+  
+  - Please provide useful human-readable commit messages, as they will be used for automated change logging.
+  - If introducing a new component, make sure to add it to `src/index.ts`, so it can be built and imported into other repositories.
 
-1.  **Install the dependencies.**
+- Push the branch to Github.
+- Label the PR on Github according to semantic versioning:
 
-    Navigate into your new site’s directory and install the necessary dependencies.
+  - "Major" - Introduces a significant, breaking change.
+  - "Minor" - Introduces new functionality (eg, a new component).
+  - "Patch" - Fixes or refactors, in a way that will not break any previous behavior.
 
-    ```shell
-    # Navigate to the directory
-    cd learnstorybook-design-system/
+- If tests pass, a PR-specific Storybook should be published automatically, and the link made available in the PR.
 
-    # Install the dependencies
-    yarn
-    ```
+### Review
 
-1.  **Open the source code and start editing!**
+Once a PR has been pushed, it is available for review on Chromatic. Each PR should be reviewed by both an engineer and a designer (unless changes do not affect design). To conduct a design review of a PR, click through to the build-specific review on Chromatic, where you can comment on and approve/deny changes on a story-by-story basis.
 
-    Open the `learnstorybook-design-system` directory in your code editor of choice and building your first component!
+Once all changes have been approved on Chromatic, the PR is ready to merge.
 
-## 🔎 What's inside?
+### Merge and Deploy
 
-A quick look at the top-level files and directories included with this template.
+On merge, the a new release will be prepared using the PR label for incrementing information.
 
-    .
-    ├── node_modules
-    ├── public
-    ├── src
-    ├── .gitignore
-    ├── .env
-    ├── LICENSE
-    ├── package.json
-    ├── yarn.lock
-    └── README.md
+## Best Practices
 
+### Styling
 
-1.  **`node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages).
+Our component library is built on top of MUI v5. MUI provides a number of styling options. To maintain a pattern that isn't strictly dependent on MUI going forward, we prefer styling patterns in the following order:
 
-2.  **`public`**: This directory will contain the development and production build of the site.
+#### SASS Modules
 
-3.  **`src`**: This directory will contain all of the code related to what you will see on your application.
+Styles in SCSS module files are the preferred styling pattern for the component library. Import a component-specific `component.module.scss` file for each component, and apply the styles via `className`:
 
-4. **`.env`**: This file will contain the necessary environment variables for your application.
+```jsx
+// Unfortunately, the webpack configuration right now makes the explicit loader syntax necessary
+import styles from '!style-loader!css-loader!sass-loader!./MyComponent.module.scss';
 
-5.  **`.gitignore`**: This file tells git which files it should not track or maintain during the development process of your project.
+// ...
 
-6. **`LICENSE`**: The template is licensed under the MIT licence.
+<MyComponent className={styles.myComponent} />
+```
 
-7. **`package.json`**: Standard manifest file for Node.js projects, which typically includes project specific metadata (such as the project's name, the author among other information). It's based on this file that npm will know which packages are necessary to the project.
+Any given style file can then import global variables internally:
 
-8. **`yarn.lock`**: This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(Do not change it manually).**
+```scss
+@import '@sass/theme.scss';
 
-9. **`README.md`**: A text file containing useful reference information about the project.
+.button {
+  background-color: $primary-500;
+}
+```
 
-## Contribute
+These variables can be found in `src/shared/scss`.
 
-If you encounter an issue with the template, we encourage you to open an issue in this template's repository.
+#### Emotion
 
-## Learning Storybook
+MUI v5 comes with Emotion (a CSS-in-JS library) built in. To use it, simply import it from `@mui/material`:
 
-1. Read our introductory tutorial over at [Storybook tutorials](https://storybook.js.org/tutorials/intro-to-storybook/react/en/get-started/).
-2. Learn how to transform your component libraries into design systems in our [Design Systems for Developers](https://storybook.js.org/tutorials/design-systems-for-developers/) tutorial.
-2. See our official documentation at [Storybook](https://storybook.js.org/).
+```jsx
+import { styled, Button as MuiButton } from '@mui/material';
+
+// ...
+
+const Button = styled(MuiButton)`
+  background-color: black;
+`;
+```
+
+In the future, we may want to set a global theme, and provide it to child components via context, such that `styled` components have access to `theme`. At present, we are avoiding this to avoid style duplication between SCSS and JS, unnecessary MUI entanglement, and added complexity.
+
+As such, `scss` files, which have access to the base `theme.scss` file, are more idiomatic and extensible.
+
+#### SX
+
+MUI v5 provides an `sx` prop to each component which allows for theme-aware styling. Because we are avoiding theming in this component library, and because the prop is MUI-specific, we will generally avoid the prop, and use `scss` styles instead.
+
+### Documentation and Prop Types
+
+Components should be documented using JSDoc syntax, but avoiding props within the component signature. Instead, props can be documented in accompanying TypeScript types, using the JSDoc comment syntax there as well. Both of these will get picked up and displayed in Storybook:
+
+> Note the markdown in the component documentation. An H3 makes a reasonably sized component title.
+
+```jsx
+import React, { ReactElement } from 'react';
+
+interface ComponentProps {
+  /** Just your typical react child **/
+  children: ReactElement;
+  // ...
+}
+
+/**
+ * ### Component Name
+ * 
+ * Does something really cool and also really complicated, which needs explaining.
+ **/
+export const ComponentName = (props: ComponentProps) => {
+  // ...
+};
+```
+
+### Component Best Practices
+
+Components should all be functional. They should also all be exported by name: `export const MyComponent = ...`.

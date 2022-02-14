@@ -1,15 +1,11 @@
 import React, { ReactElement } from "react";
-import { styled, Button as MuiButton, Theme, Palette } from "@mui/material";
+import { Button as MuiButton } from "@mui/material";
+import cx from "classnames";
 
-import { isAbsoluteURL } from "../../shared/utils";
+import { isAbsoluteURL } from "@shared/utils";
+import styles from "!style-loader!css-loader!sass-loader!./Button.module.scss";
 
 type ButtonType = "primary" | "secondary" | "tertiary" | "destructive";
-
-const grey = {
-  dark: "#626D80",
-  main: "#C1C5C9",
-  light: "#F5F5F5",
-};
 
 export interface ButtonProps {
   children: ReactElement | string;
@@ -24,7 +20,7 @@ export interface ButtonProps {
   to?: string;
 
   /** Must be passed if the button contains a relative `to` path. */
-  Link?: React.Component;
+  Link?: ReactElement;
   startIcon?: ReactElement;
   endIcon?: ReactElement;
   disabled?: boolean;
@@ -54,16 +50,20 @@ export const Button = (props: ButtonProps): ReactElement => {
     ...other,
     variant,
     href: "",
+    className: cx(styles.button, styles[type], thin && styles.thin, disabled && styles.disabled),
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } as any;
 
   if (!disabled) {
     if (onClick) {
       passedProps.onClick = onClick;
-    } else if (to) {
+    }
+
+    if (to) {
       passedProps.href = to;
       if (isAbsoluteURL(to)) {
         passedProps.component = "a";
+        passedProps._target = "blank";
       } else if (!Link) {
         throw new Error('Relative "to" value given to Button without a Link.');
       } else {
@@ -72,46 +72,7 @@ export const Button = (props: ButtonProps): ReactElement => {
     }
   }
 
-  const colors = (palette: Palette) => {
-    const { primary, error } = palette;
-
-    return disabled
-      ? { bg: grey.light, text: grey.main, border: "transparent" }
-      : {
-          primary: { bg: primary.main, text: "white", border: primary.main },
-          secondary: { bg: primary.light, text: primary.main, border: "transparent" },
-          tertiary: { bg: "white", text: grey.dark, border: grey.dark },
-          destructive: { bg: error.light, text: error.main, border: "transparent" },
-        }[type];
-  };
-
-  const styles = (theme: Theme) => {
-    const c = colors(theme.palette);
-    return `
-      padding: ${thin ? "2px 12px" : "8px 16px"};
-      background-color: ${c.bg};
-      color: ${c.text};
-      border: 1px solid ${c.border};
-      border-radius: 8px;
-      box-shadow: none;
-      cursor: ${disabled ? "not-allowed" : "pointer"};
-
-      /* Invert colors on hover (keep border the same and ignore for disabled) */
-      &:hover {
-        background-color: ${disabled ? c.bg : c.text};
-        color: ${disabled ? c.text : c.bg};
-        border: 1px solid ${c.border};
-        border-radius: 8px;
-        box-shadow: none;
-      }
-    `;
-  };
-
-  const StyledButton = styled(MuiButton)`
-    ${({ theme }) => styles(theme)}
-  `;
-
-  return <StyledButton {...passedProps}>{children}</StyledButton>;
+  return <MuiButton {...passedProps}>{children}</MuiButton>;
 };
 
 Button.defaultProps = {

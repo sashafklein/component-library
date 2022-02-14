@@ -91,38 +91,3 @@ $theme-colors: (
   "light": $light-gray,
   "dark": $dark-gray,
 );
-
-:export {
-  primary700: $primary-700;
-  primary500: $primary-500;
-  primary100: $primary-100;
-  accent500: $accent-500;
-  gray600: $gray-600;
-  gray500: $gray-500;
-  gray400: $gray-400;
-  gray300: $gray-300;
-  gray250: $gray-250;
-  gray200: $gray-200;
-  gray100: $gray-100;
-  grayWhite: $gray-white;
-  black900: $black-900;
-  black600: $black-600;
-  black500: $black-500;
-  red700: $red-700;
-  red500: $red-500;
-  red100: $red-100;
-  green700: $green-700;
-  green500: $green-500;
-  green100: $green-100;
-  yellow500: $yellow-500;
-  yellow100: $yellow-100;
-  primary: $primary;
-  success: $success;
-  info: $info;
-  secondary: $secondary;
-  warning: $warning;
-  danger: $danger;
-  light: $light-gray;
-  dark: $dark-gray;
-  darkBlue: $dark-blue;
-}

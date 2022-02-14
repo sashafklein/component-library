@@ -16,11 +16,10 @@ jobs:
       - uses: actions/checkout@v1
       - name: Install dependencies
         run: yarn
-        # 👇 Adds Chromatic as a step in the workflow
-      - name: Lint files
-        run: yarn lint
       - name: Run tests
         run: yarn test
+      - name: Lint files
+        run: NODE_ENV=production yarn lint
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         # Chromatic GitHub Action options

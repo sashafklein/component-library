@@ -22,7 +22,8 @@
   "include": ["src"],
   "baseUrl": ".",
   "paths": {
-    "@shared/*": ["./src/shared/*"],
-    "@stories/*": ["./src/stories/*"]
+    "@shared/*": ["src/shared/*"],
+    "@stories/*": ["src/stories/*"],
+    "@src/*": ["src/*"]
   }
 }

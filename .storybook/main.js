@@ -16,6 +16,8 @@ const updateEmotionAliases = config => ({
       "emotion-theming": path.join(modulesDir, "@emotion/react"),
       "@shared": path.join(__dirname, "../src/shared"),
       "@stories": path.join(__dirname, "../src/stories"),
+      "@src": path.join(__dirname, "../src"),
+      "@scss": path.join(__dirname, "../src/shared/scss"),
     },
   },
 });

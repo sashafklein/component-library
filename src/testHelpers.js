@@ -1,14 +1,7 @@
 import React from "react";
 import { render as rtlRender } from "@testing-library/react";
-import { ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
-
-import { theme } from "./shared/theme";
-import { mockVariables } from "./mockVariables";
+import { StyledEngineProvider } from "@mui/material/styles";
 
 export const render = children => {
-  return rtlRender(
-    <StyledEngineProvider injectFirst>
-      <ThemeProvider theme={theme(mockVariables)}>{children}</ThemeProvider>
-    </StyledEngineProvider>
-  );
+  return rtlRender(<StyledEngineProvider injectFirst>{children}</StyledEngineProvider>);
 };
