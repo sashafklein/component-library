@@ -6,7 +6,7 @@ import { isAbsoluteURL } from "../../shared/utils";
 type ButtonType = "primary" | "secondary" | "tertiary" | "destructive";
 
 const grey = {
-  dark: "#525a68",
+  dark: "#626D80",
   main: "#C1C5C9",
   light: "#F5F5F5",
 };
