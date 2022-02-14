@@ -1,14 +1,15 @@
 import React, { ReactElement } from "react";
-import { Meta, Story } from "@storybook/react";
+import { Story } from "@storybook/react";
 import { styled } from "@mui/material";
-import { Button, ButtonProps } from "./Button";
 import { Star, Delete, ThumbUp } from "@mui/icons-material";
 import { yellow } from "@mui/material/colors";
+
+import { Button, ButtonProps } from "./Button";
 
 export default {
   title: "Atoms/Button",
   component: Button,
-} as Meta;
+};
 
 const Row = styled("div")`
   display: flex;
@@ -24,29 +25,16 @@ const Row = styled("div")`
 `;
 
 export const Examples = (): ReactElement => (
-  <>
-    <Row>
-      <Button>Primary</Button>
-      <Button type="secondary">Secondary</Button>
-      <Button type="tertiary">Tertiary</Button>
-      <Button type="destructive">Destructive</Button>
-      <Button type="primary" startIcon={<Star />}>
-        With Start Icon
-      </Button>
-      <Button type="secondary" endIcon={<ThumbUp />}>
-        With End Icon
-      </Button>
-    </Row>
-    <Row>
-      <Button type="primary" thin>
-        Thin
-      </Button>
-      <Button type="destructive" endIcon={<Delete />} thin>
-        Thin With Icon
-      </Button>
-      <Button disabled>Disabled</Button>
-    </Row>
-  </>
+  <Row>
+    <Button>Primary</Button>
+    <Button type="secondary" thin startIcon={<Star />}>
+      Secondary
+    </Button>
+    <Button type="tertiary">Tertiary</Button>
+    <Button type="destructive" endIcon={<Delete />}>
+      Remove
+    </Button>
+  </Row>
 );
 
 const Template: Story<ButtonProps> = args => <Button {...args} />;
@@ -69,7 +57,7 @@ Thin.args = { children: "Smaller", thin: true };
 export const WithStartIcon = Template.bind({});
 WithStartIcon.args = {
   children: "Unfavorite",
-  startIcon: <Star htmlColor={yellow[600]} />,
+  startIcon: <ThumbUp htmlColor={yellow[600]} />,
   type: "secondary",
 };
 

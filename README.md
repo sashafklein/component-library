@@ -51,6 +51,7 @@ Styles in SCSS module files are the preferred styling pattern for the component 
 
 ```jsx
 // Unfortunately, the webpack configuration right now makes the explicit loader syntax necessary
+// Also note that in order to enable variable imports, the file needs to end in module.scss
 import styles from '!style-loader!css-loader!sass-loader!./MyComponent.module.scss';
 
 // ...
@@ -90,31 +91,33 @@ As such, `scss` files, which have access to the base `theme.scss` file, are more
 
 #### SX
 
-MUI v5 provides an `sx` prop to each component which allows for theme-aware styling. Because we are avoiding theming in this component library, and because the prop is MUI-specific, we will generally avoid the prop, and use `scss` styles instead.
+MUI v5 provides an `sx` prop to each component which allows for theme-aware styling. Because we are avoiding theming in this component library, and because the prop is MUI-specific, we advocate avoiding the prop within the component-library, and using `scss` styles instead.
 
 ### Documentation and Prop Types
 
 Components should be documented using JSDoc syntax, but avoiding props within the component signature. Instead, props can be documented in accompanying TypeScript types, using the JSDoc comment syntax there as well. Both of these will get picked up and displayed in Storybook:
 
-> Note the markdown in the component documentation. An H3 makes a reasonably sized component title.
+> Note the markdown in the component documentation. An H3 makes a reasonably sized component subtitle.
 
 ```jsx
 import React, { ReactElement } from 'react';
+
+/**
+ * ### A helpful component
+ *
+ * Does something really cool and also really complicated:
+ * - You can use markdown here.
+ * - But prop descriptions go in interface below.
+ **/
+export const ComponentName = (props: ComponentProps) => {
+  // ...
+};
 
 interface ComponentProps {
   /** Just your typical react child **/
   children: ReactElement;
   // ...
 }
-
-/**
- * ### Component Name
- * 
- * Does something really cool and also really complicated, which needs explaining.
- **/
-export const ComponentName = (props: ComponentProps) => {
-  // ...
-};
 ```
 
 ### Component Best Practices

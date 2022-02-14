@@ -20,10 +20,11 @@
     "noEmit": true
   },
   "include": ["src"],
-  "baseUrl": ".",
+  "baseUrl": "src",
   "paths": {
-    "@shared/*": ["src/shared/*"],
-    "@stories/*": ["src/stories/*"],
-    "@src/*": ["src/*"]
+    "@shared/*": ["shared/*"],
+    "@stories/*": ["stories/*"],
+    "@src*": ["*"],
+    "@scss/*": ["shared/scss/*"]
   }
 }

@@ -14,9 +14,8 @@ const updateEmotionAliases = config => ({
       "@emotion/styled": path.join(modulesDir, "@emotion/styled"),
       "@emotion/styled-base": path.join(modulesDir, "@emotion/styled"),
       "emotion-theming": path.join(modulesDir, "@emotion/react"),
-      "@shared": path.join(__dirname, "../src/shared"),
-      "@stories": path.join(__dirname, "../src/stories"),
-      "@src": path.join(__dirname, "../src"),
+      // Synced to tsconfig.json
+      "@": path.join(__dirname, "../src/"),
       "@scss": path.join(__dirname, "../src/shared/scss"),
     },
   },

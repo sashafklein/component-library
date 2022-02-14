@@ -1,6 +1,7 @@
 import React from "react";
 import { fireEvent, screen } from "@testing-library/react";
-import { render } from "../../testHelpers";
+
+import { render } from "@src/testHelpers";
 import { Button, ButtonProps } from "./Button";
 
 const defaultProps = { type: "primary", children: "Click me" };
