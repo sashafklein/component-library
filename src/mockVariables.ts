@@ -41,4 +41,6 @@ export const mockVariables = {
   breakpointXl: "1536px",
 };
 
+console.log(mockVariables.green700, mockVariables.green100);
+
 jest.mock("../shared/scss/theme.module.scss", () => mockVariables);
