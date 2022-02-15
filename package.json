@@ -18,8 +18,8 @@
     "eject": "react-scripts eject",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
+    "sb": "start-storybook -p 6006 -s public",
+    "build-sb": "build-storybook -s public",
     "chromatic": "chromatic --project-token=CHROMATIC_PROJECT_TOKEN"
   },
   "babel": {},
@@ -38,12 +38,12 @@
   "devDependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
+    "@fontsource/inter": "^4.5.4",
     "@mui/icons-material": "^5.4.1",
     "@mui/material": "^5.4.1",
     "@storybook/addon-actions": "^6.4.18",
     "@storybook/addon-essentials": "^6.4.18",
     "@storybook/addon-links": "^6.4.18",
-    "@storybook/addon-storyshots": "^6.4.19",
     "@storybook/node-logger": "^6.4.18",
     "@storybook/preset-create-react-app": "^3.2.0",
     "@storybook/preset-scss": "^1.0.3",
@@ -51,16 +51,27 @@
     "@typescript-eslint/eslint-plugin": "^5.11.0",
     "@typescript-eslint/parser": "^5.11.0",
     "chromatic": "^6.4.3",
+    "classnames": "^2.3.1",
     "css-loader": "^5.2.7",
     "eslint": "^8.8.0",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-storybook": "^0.5.6",
     "jest-css-modules": "^2.1.0",
     "prettier": "^2.5.1",
     "sass": "^1.49.7",
     "sass-loader": "^10.1.1",
-    "style-loader": "^2.0.0",
+    "style-loader": "2.0.0",
+    "tsconfig-paths-webpack-plugin": "^3.5.2",
     "typescript": "^4.5.5"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^@src/(.*)$": "<rootDir>/src/$1",
+      "^@shared/(.*)$": "<rootDir>/src/shared/$1",
+      "^@stories/(.*)$": "<rootDir>/src/stories/$1"
+    }
   }
 }

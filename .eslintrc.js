@@ -11,6 +11,7 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "prettier",
     "plugin:storybook/recommended",
+    "plugin:import/recommended",
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -24,6 +25,9 @@ module.exports = {
   rules: {
     "react/prop-types": 0,
     "@typescript-eslint/no-unused-vars": 2,
+
+    "import/order": "error",
+    "import/no-unresolved": 0,
 
     // Warn locally and throw errors on production
     "no-debugger": errorOnProd,

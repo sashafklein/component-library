@@ -1,0 +1,60 @@
+@import "@scss/theme.scss";
+
+@mixin colors($bg, $text, $border, $hoverBorder: $border) {
+  background-color: $bg;
+  color: $text;
+  border: 1px solid $border;
+
+  &:hover {
+    background-color: $text;
+    color: $bg;
+    border-color: $hoverBorder;
+  }
+}
+
+.button {
+  font-family: $font-family-sans-serif;
+  padding: 8px 16px;
+  border-radius: 8px;
+  box-shadow: none;
+  cursor: pointer;
+  text-transform: none;
+
+  &:hover {
+    border-radius: 8px;
+    box-shadow: none;
+  }
+
+  &.primary {
+    @include colors($primary-500, white, $primary-500);
+  }
+
+  &.secondary {
+    @include colors($primary-100, $primary-500, $primary-100, $primary-500);
+  }
+
+  &.tertiary {
+    @include colors(white, $black-500, $black-500);
+  }
+
+  &.destructive {
+    @include colors($red-100, $red-700, $red-100, $red-700);
+  }
+
+  &.disabled {
+    background-color: $gray-100;
+    color: $gray-300;
+    border: 1px solid $gray-100;
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: $gray-100;
+      color: $gray-300;
+      border: 1px solid $gray-100;
+    }
+  }
+
+  &.thin {
+    padding: 2px 12px;
+  }
+}
