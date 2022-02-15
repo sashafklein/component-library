@@ -16,7 +16,7 @@ Check out a new branch for any changes, push that branch to the main repo, and P
 To deploy:
 
 - Make your change (including any relevant tests) in your branch.
-  
+
   - Please provide useful human-readable commit messages, as they will be used for automated change logging.
   - If introducing a new component, make sure to add it to `src/index.ts`, so it can be built and imported into other repositories.
 
@@ -123,3 +123,25 @@ interface ComponentProps {
 ### Component Best Practices
 
 Components should all be functional. They should also all be exported by name: `export const MyComponent = ...`.
+
+### Path Aliases
+
+Path aliases (for absolute paths) have been enabled throughout the app to simplify imports. In a JS/TS file:
+
+```js
+import { isAbsoluteURL } from '@shared/utils';
+```
+
+In an SCSS file:
+
+```scss
+@import '@scss/theme.scss';
+```
+
+These mappings could, unfortunately, not be easily automatically synced between the different necessary configuration files, and so they are currently duplicated in three places:
+
+- In `tsconfig.paths.json`
+- In `storybook/main.js`
+- In `package.json`, under `jest.moduleNameMapper` - to get the tests to understand them.
+
+Make sure to update all three locations if adding a new alias.

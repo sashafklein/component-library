@@ -63,7 +63,15 @@
     "prettier": "^2.5.1",
     "sass": "^1.49.7",
     "sass-loader": "^10.1.1",
-    "style-loader": "^2.0.0",
+    "style-loader": "2.0.0",
+    "tsconfig-paths-webpack-plugin": "^3.5.2",
     "typescript": "^4.5.5"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^@src/(.*)$": "<rootDir>/src/$1",
+      "^@shared/(.*)$": "<rootDir>/src/shared/$1",
+      "^@stories/(.*)$": "<rootDir>/src/stories/$1"
+    }
   }
 }

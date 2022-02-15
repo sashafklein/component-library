@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import { Button as MuiButton } from "@mui/material";
-import cx from "classnames";
+import cn from "classnames";
 
 import { isAbsoluteURL } from "@shared/utils";
 import styles from "!style-loader!css-loader!sass-loader!./Button.module.scss";
@@ -25,7 +25,7 @@ export const Button = (props: ButtonProps): ReactElement => {
   const passedProps = {
     ...other,
     variant,
-    className: cx(styles.button, styles[type], thin && styles.thin, disabled && styles.disabled),
+    className: cn(styles.button, styles[type], thin && styles.thin, disabled && styles.disabled),
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } as any;
 

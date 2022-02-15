@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
-    "lib": ["es6", "dom"],
+    "lib": [
+      "es6",
+      "dom"
+    ],
     "noImplicitAny": true,
     "noImplicitThis": true,
     "strictNullChecks": true,
@@ -17,14 +20,11 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true
+    "noEmit": true,
+    "baseUrl": "src"
   },
-  "include": ["src"],
-  "baseUrl": "src",
-  "paths": {
-    "@shared/*": ["shared/*"],
-    "@stories/*": ["stories/*"],
-    "@src*": ["*"],
-    "@scss/*": ["shared/scss/*"]
-  }
+  "extends": "./tsconfig.paths.json",
+  "include": [
+    "src"
+  ]
 }
